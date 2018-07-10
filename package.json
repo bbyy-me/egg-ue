@@ -1,6 +1,6 @@
 {
   "name": "@ustack/egg-ue",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "ustack egg extend",
   "eggPlugin": {
     "name": "ue"
@@ -11,7 +11,7 @@
     "egg-plugin"
   ],
   "dependencies": {
-    "bcrypt": "^2.0.1",
+    "bcrypt": "^3.0.0",
     "boom": "^7.2.0",
     "joi": "^13.3.0",
     "lodash": "^4.17.10",
