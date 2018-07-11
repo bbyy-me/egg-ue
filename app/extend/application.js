@@ -2,10 +2,12 @@
 
 const Joi = require('joi');
 const Boom = require('boom');
+const fs = require('fs-async-await');
 
 module.exports = {
   Joi,
   Boom,
+  fs,
 
   async ajax(url, options) {
     const res = await this.curl(url, options);
