@@ -5,9 +5,10 @@ const _ = require('lodash');
 const util = require('util');
 const bcrypt = require('bcrypt');
 const uuid = require('uuid');
+const fs = require('fs-async-await');
 
 module.exports = {
-  _, uuid,
+  _, uuid, fs,
   password: {
     hash: async (originalPassword, saltRounds = 10) => {
       return await bcrypt.hash(originalPassword, saltRounds);
