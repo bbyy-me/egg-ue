@@ -1,6 +1,6 @@
 {
   "name": "@ustack/egg-ue",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "ustack egg extend",
   "eggPlugin": {
     "name": "ue"
@@ -50,12 +50,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eggjs/egg-ue.git"
+    "url": "git+https://github.com/unitedstack/egg-ue.git"
   },
   "bugs": {
-    "url": "https://github.com/eggjs/egg/issues"
+    "url": "https://github.com/unitedstack/halo/issues"
   },
-  "homepage": "https://github.com/eggjs/egg-ue#readme",
   "author": "hbshun <bb@bbyy.me>",
   "license": "MIT"
 }
