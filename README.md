@@ -17,6 +17,7 @@ exports.ue = {
 ```
 
 ## Example
+```js
 application
 joi 
 boom
@@ -58,6 +59,7 @@ getSymbolValue(obj, symbolKey) {
 randomCode(){
     return 0~900000    0变100000
 }
+```
 
 <!-- example here -->
 
