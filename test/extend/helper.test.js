@@ -104,4 +104,11 @@ describe('test/extend/helper.test.js', () => {
       }
     });
   });
+  describe('urlconcat', () => {
+    it('urlconcat', async () => {
+      const ctx = app.mockContext();
+      assert(ctx.helper.urlconcat('http://localhost:8080/', 'api/search', 'something', '?a=b&b=c'),
+        'http://localhost:8080/api/search/something?a=b&b=c');
+    });
+  });
 });

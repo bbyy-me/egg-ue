@@ -1,6 +1,6 @@
 {
   "name": "@ustack/egg-ue",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "ustack egg extend",
   "eggPlugin": {
     "name": "ue"
@@ -16,6 +16,7 @@
     "fs-async-await": "^0.1.0",
     "joi": "^13.3.0",
     "lodash": "^4.17.10",
+    "urlconcat": "0.0.12",
     "uuid": "^3.2.1"
   },
   "devDependencies": {
