@@ -30,7 +30,7 @@ describe('test/extend/context.test.js', () => {
     });
 
     describe('ajax', () => {
-      it('test success: 200=<statusCode<300', async () => {
+      it('test success: statusCode<200 or statusCode>=300', async () => {
         const ctx = app.mockContext();
         try {
           await ctx.ajax('https://www.ustack.com/not-found-404');
@@ -43,10 +43,18 @@ describe('test/extend/context.test.js', () => {
           assert(err.status === 404);
         }
       });
-
-      it('test failed: statusCode<200 or statusCode>=300', async () => {
+      it('test failed: 200=<statusCode<300', async () => {
         const ctx = app.mockContext();
         await ctx.ajax('https://www.ustack.com');
+      });
+      it('test bad host', async () => {
+        const ctx = app.mockContext();
+        try {
+          await ctx.ajax('https://undefined/not-found-404');
+        } catch (err) {
+          assert(err.code === 'ENOTFOUND');
+          assert(err.status === -1);
+        }
       });
     });
   });

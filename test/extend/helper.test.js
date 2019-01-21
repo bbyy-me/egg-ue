@@ -51,8 +51,13 @@ describe('test/extend/helper.test.js', () => {
       const ctx = app.mockContext();
       const originalPassword = '1234';
       const hashPassword = await ctx.helper.password.hash(originalPassword);
+      const hashPassword2 = await ctx.helper.password.hash(originalPassword);
+      console.log(hashPassword);
+      console.log(hashPassword2);
       assert(originalPassword !== hashPassword);
+      assert(hashPassword !== hashPassword2);
       assert(await ctx.helper.password.compare(originalPassword, hashPassword));
+      assert(await ctx.helper.password.compare(originalPassword, hashPassword2));
       assert(!(await ctx.helper.password.compare(originalPassword, hashPassword + '123')));
     });
   });

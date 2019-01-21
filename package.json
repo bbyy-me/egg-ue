@@ -1,10 +1,11 @@
 {
   "name": "@ustack/egg-ue",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "ustack egg extend",
   "eggPlugin": {
     "name": "ue"
   },
+  "main": "index.js",
   "keywords": [
     "egg",
     "eggPlugin",
@@ -43,6 +44,7 @@
     "autod": "autod"
   },
   "files": [
+    "index.js",
     "app",
     "config"
   ],
