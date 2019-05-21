@@ -3,17 +3,11 @@
 const Joi = require('joi');
 const _ = require('lodash');
 const Boom = require('boom');
+const ajax = require('./ajax');
 
 module.exports = {
   Joi, Boom,
-  async ajax(url, options) {
-    const res = await this.curl(url, options);
-    const { status } = res;
-    if (status >= 200 && status < 300) {
-      return res;
-    }
-    throw res;
-  },
+  ajax,
   validate(schemas = {}) {
     const ctx = this;
     const defaultOpts = { abortEarly: false };
