@@ -3,7 +3,6 @@
 const { app, assert/* , mock*/ } = require('egg-mock/bootstrap');
 const lodash = require('lodash');
 const uuid = require('uuid');
-const { join } = require('path');
 
 describe('test/extend/helper.test.js', () => {
   describe('xor', () => {
@@ -88,27 +87,6 @@ describe('test/extend/helper.test.js', () => {
     });
   });
 
-  describe('fs', () => {
-    it('readFileAsync', async () => {
-      const ctx = app.mockContext();
-      const content = await ctx.helper.fs.readFileAsync(join(__dirname, 'test_file'), 'utf8');
-      assert(content === 'hello.');
-    });
-    it('writeFileAsync', async () => {
-      const ctx = app.mockContext();
-      const fs = ctx.helper.fs;
-      const readStream = fs.createReadStream(join(__dirname, 'test_file'), 'utf8');
-      const writeStream = fs.createWriteStream(join(__dirname, 'test_file_copy'), 'utf8');
-      readStream.pipe(writeStream);
-      await fs.accessAsync(join(__dirname, 'test_file_copy'), fs.constants.W_OK | fs.constants.R_OK); //eslint-disable-line
-      await fs.unlinkAsync(join(__dirname, 'test_file_copy'));
-      try {
-        await fs.accessAsync(join(__dirname, 'test_file_copy'));
-      } catch (e) {
-        assert(e.code === 'ENOENT');
-      }
-    });
-  });
   describe('urlconcat', () => {
     it('urlconcat', async () => {
       const ctx = app.mockContext();

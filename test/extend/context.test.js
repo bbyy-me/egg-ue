@@ -33,7 +33,7 @@ describe('test/extend/context.test.js', () => {
       it('test success: statusCode<200 or statusCode>=300', async () => {
         const ctx = app.mockContext();
         try {
-          await ctx.ajax('https://www.ustack.com/not-found-404');
+          await ctx.ajax('https://www.bbyy.me/not-found-404');
           const num = 2;
           assert(num === 1);
         } catch (err) {
@@ -45,7 +45,7 @@ describe('test/extend/context.test.js', () => {
       });
       it('test failed: 200=<statusCode<300', async () => {
         const ctx = app.mockContext();
-        await ctx.ajax('https://www.ustack.com');
+        await ctx.ajax('https://www.bbyy.me');
       });
       it('test bad host', async () => {
         const ctx = app.mockContext();

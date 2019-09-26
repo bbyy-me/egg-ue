@@ -5,11 +5,10 @@ const _ = require('lodash');
 const util = require('util');
 const bcrypt = require('bcrypt');
 const uuid = require('uuid');
-const fs = require('fs-async-await');
 const urlconcat = require('urlconcat');
 
 module.exports = {
-  _, uuid, fs,
+  _, uuid,
   urlconcat: urlconcat.concat,
   password: {
     hash: async (originalPassword, saltRounds = 10) => {

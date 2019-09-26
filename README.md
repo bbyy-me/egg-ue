@@ -3,7 +3,7 @@
 ## Install
 
 ```bash
-npm i @ustack/egg-ue --save
+npm i @bbyy/egg-ue --save
 ```
 
 ## Usage
@@ -12,7 +12,7 @@ npm i @ustack/egg-ue --save
 // {app_root}/config/plugin.js
 exports.ue = {
   enable: true,
-  package: '@ustack/egg-ue',
+  package: '@bbyy/egg-ue',
 };
 ```
 
@@ -21,7 +21,6 @@ exports.ue = {
 ### application
 * joi 
 * boom
-* fs --------->    fs-async-await
 ```js
 ajax(url, options){
     //  发送请求并判断status是否为2XX 
@@ -43,7 +42,6 @@ validate(schema = {}){
 ### helper
 * _ ---------> lodash
 * uuid
-* fs ----------> fs-async-await
 ```js
 password {
     hash () {
@@ -78,7 +76,7 @@ randomCode(){
 
 ## Questions & Suggestions
 
-Please open an issue [here](https://github.com/unitedstack/halo/issues).
+Please open an issue [here](https://github.com/bbyy-me/egg-ue/issues).
 
 ## License
 

@@ -1,7 +1,7 @@
 {
-  "name": "@ustack/egg-ue",
+  "name": "@bbyy/egg-ue",
   "version": "0.8.0",
-  "description": "ustack egg extend",
+  "description": "egg universal extend",
   "eggPlugin": {
     "name": "ue"
   },
@@ -14,7 +14,6 @@
   "dependencies": {
     "bcrypt": "^3.0.0",
     "boom": "^7.2.0",
-    "fs-async-await": "^0.1.0",
     "joi": "^14.3.1",
     "lodash": "^4.17.10",
     "urlconcat": "0.0.12",
@@ -53,10 +52,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/unitedstack/egg-ue.git"
+    "url": "git+https://github.com/bbyy-me/egg-ue.git"
   },
   "bugs": {
-    "url": "https://github.com/unitedstack/halo/issues"
+    "url": "https://github.com/bbyy-me/egg-ue/issues"
   },
   "author": "hbshun <bb@bbyy.me>",
   "license": "MIT"
